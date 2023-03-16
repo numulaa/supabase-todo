@@ -4,6 +4,8 @@ import { supabase } from '../supabase';
 function ClearTasks() {
   const [loading, setLoading] = useState(false);
   const toast = useToast();
+
+  //remove all of the tasks
   async function handleClear() {
     setLoading(true);
     const { data, error } = await supabase
